@@ -431,7 +431,7 @@ if (${build_as_dynamic})
     if (${use_prov_client_core})
         target_link_libraries(iothub_client_dll hsm_security_client prov_auth_client)
     endif()
-    target_link_libraries(iothub_client_dll parson)
+    target_link_libraries(iothub_client_dll parson uamqp)
 
     if (${CMAKE_C_COMPILER_ID} STREQUAL "GNU" OR ${CMAKE_C_COMPILER_ID} STREQUAL "Clang")
         target_link_libraries(iothub_client_dll
@@ -448,7 +448,7 @@ add_library(iothub_client
 )
 setSdkTargetBuildProperties(iothub_client)
 target_link_libraries(iothub_client ${iothub_client_libs})
-target_link_libraries(iothub_client parson)
+target_link_libraries(iothub_client parson uamqp)
 
 if (${use_prov_client_core})
     target_link_libraries(iothub_client hsm_security_client prov_auth_client)
