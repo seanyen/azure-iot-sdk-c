@@ -332,7 +332,7 @@ if(${use_amqp})
             ${iothub_client_amqp_ws_transport_c_files}
             ${iothub_client_amqp_ws_transport_h_files})
 
-        set(iothub_client_libs ${iothub_client_libs} uamqp)
+        set(iothub_client_libs ${iothub_client_libs})
     endif(build_as_dynamic)
 endif()
 
