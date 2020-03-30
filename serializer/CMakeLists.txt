@@ -77,7 +77,7 @@ if (${build_as_dynamic})
         serializer_dll SHARED ${serializer_c_files} ${serializer_h_files} ./src/serializer.def
     )
     target_link_libraries(serializer_dll
-        aziotsharedutil_dll
+        aziotsharedutil
         parson
     )
 
