@@ -404,7 +404,7 @@ endif()
 
 if (${use_installed_dependencies})
     # Install azure_iot_sdks
-    set(package_location "cmake")
+    set(package_location "share/cmake/${PROJECT_NAME}")
 
     include(CMakePackageConfigHelpers)
 

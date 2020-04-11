@@ -59,7 +59,7 @@ else()
         ENDIF(WIN32)
 
         add_library(msr_riot ${msr_riot_c_files} ${msr_riot_h_files})
-        set(package_location "cmake")
+        set(package_location "share/cmake/${PROJECT_NAME}")
         install(TARGETS msr_riot EXPORT msr_riotTargets
             LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
             ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
